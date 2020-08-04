@@ -1,0 +1,76 @@
+#navbar{
+    flex-direction: column;
+    background: #191a1d;
+}
+
+#navbar ul li a{
+    font-size: 0.6em;
+    padding: 0.12rem 0.12rem 0 0.12rem;
+    margin: 0.16rem;
+}
+
+#navbar a h2{
+    margin-top: 0.25rem;
+}
+form{
+    width: 90%;
+}
+
+.container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-box{
+    width: 90%;
+}
+
+#about h1{
+    margin-top: 2rem;
+}
+
+#exercise-pic{
+    height: 240px;;
+}
+
+table, thead, tbody, th, td, tr { 
+    display: block; 
+}
+
+#exercise-guide img {
+    height: 180px;
+}
+
+thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+tr { border: 1px solid #ccc; }
+
+td { 
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+}
+
+td:before {
+    position: absolute;
+    top: 0px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+}
+
+td:nth-of-type(1):before { content: "Name";}
+td:nth-of-type(2):before { content: "Days/Week"; }
+td:nth-of-type(3):before { content: "Monday"; }
+td:nth-of-type(4):before { content: "Tuesday"; }
+td:nth-of-type(5):before { content: "Wednesday"; }
+td:nth-of-type(6):before { content: "Thursday"; }
+td:nth-of-type(7):before { content: "Friday"; }
+td:nth-of-type(8):before { content: "Saturday"; }
+tr:nth-of-type(even) { background-color: rgba(256, 256, 256, 0.1); }

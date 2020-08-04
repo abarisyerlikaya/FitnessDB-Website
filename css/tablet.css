@@ -1,0 +1,30 @@
+#navbar ul li a{
+    font-size: 0.85em;
+    padding: 0.2rem 0.2rem 0 0.2rem;
+    margin: 0.25rem;
+    border-bottom-width: 2px;
+}
+
+#navbar a h2{
+    font-size: 0.85em;
+}
+
+.page{
+    padding: 3rem 2rem 3rem 2rem;
+}
+
+form{
+    width: 40%;
+}
+
+.list-box{
+    width: 40%;
+}
+
+#exercise-guide select{
+    width: 75%;
+}
+
+#exercise-guide img {
+    height: 256px;
+}

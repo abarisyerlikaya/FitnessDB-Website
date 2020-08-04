@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Initializations-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fitness tool which helps you to plan your diet and exercises." />
+    <meta name="keywords" content="fitness, workout, diet, calories, macros, exercise" />
+    <title>FitnessDB</title>
+
+    <!--Font & Icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
+
+    <!--Styles-->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" media="(max-width:768px)" href="css/tablet.css" />
+    <link rel="stylesheet" media="(max-width:512px)" href="css/mobile.css" />
+  </head>
+
+  <body>
+    <!--Navbar-->
+    <header>
+      <nav id="navbar">
+        <a href="#about"><h2>FitnessDB</h2></a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#bmi-calculator">BMI</a></li>
+          <li><a href="#caloric-needs">Caloric Needs</a></li>
+          <li><a href="#workout-planning">Workout Planning</a></li>
+          <li><a href="#exercise-guide">Exercise Guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--About-->
+    <section id="about" class="page page-dark">
+      <h1>ABOUT</h1>
+      <div class="container">
+        <img src="img/dumbbel-blue.png" alt="dumbbel-white" width="128px" />
+        <p
+          >FitnessDB helps you to improve your sports experience. Here, you can get informed about your body and your
+          health, determine the most suitable target for you, learn your calorie needs according to your goal, make an
+          exercise plan and see exercise forms accordingly. You can also learn the answers of the most popular questions
+          about fitness and contact us to get more information.</p
+        >
+      </div>
+      <hr /><br />
+      <ul>
+        <li>Calculate your BMI to determine your goal.</li>
+        <li>Calculate your caloric needs and macros due to your goal.</li>
+        <li>Create a workout program.</li>
+        <li>Learn exercise forms from the exercise guide.</li>
+        <li>Browse FAQ to get informed.</li>
+        <li>Contact us for your questions or suggestions.</li>
+      </ul>
+      <a href="#bmi-calculator" class="btn btn-blue">Get Started</a>
+    </section>
+
+    <!--BMI Calculator-->
+    <section id="bmi-calculator" class="page page-light">
+      <h1>BODY MASS INDEX (BMI)</h1><br />
+      <p
+        >Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.
+        Calculate your BMI to determine your goal. </p
+      ><br /><hr /><br />
+      <h1>BMI Calculator</h1>
+      <div class="container">
+        <form id="bmi-form">
+          <label for="bmi-height">Your Height:</label><br />
+          <input type="text" id="bmi-height" placeholder="Centimeters" /><br />
+          <label for="bmi-weight">Your Weight:</label><br />
+          <input type="text" id="bmi-weight" placeholder="Kilograms" /><br /><br />
+          <span id="bmi-submit" class="btn btn-blue">Submit</span>
+        </form>
+
+        <div class="list-box">
+          <h4 id="bmi-result">YOUR BMI = [Not Entered]</h4><br />
+          <h3>BMI Categories:</h3>
+          <ul>
+            <li>Underweight: BMI &lt; 18.5 (Gain weight)</li>
+            <li>Normal weight: 18.5 &lt; BMI &lt; 24.9 (Maintain)</li>
+            <li>Overweight: BMI &gt; 24.9 (Loss weight)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--Caloric Needs Calculator-->
+    <section id="caloric-needs" class="page page-dark">
+      <h1>CALORIC NEEDS</h1><br />
+      <p
+        >The Calorie Calculator can be used to estimate the number of calories a person needs to consume each day. This
+        calculator can also provide some simple guidelines for gaining or losing weight.</p
+      >
+      <br /><hr /><br />
+      <h1>Calorie Needing Calculator</h1>
+      <div class="container">
+        <form id="calorie-form">
+          Gender: <br />
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label><br />
+          <label for="age">Age:</label><br />
+          <input type="text" id="age" placeholder="15-80 years" /><br />
+          <label for="calorie-height">Height:</label><br />
+          <input type="text" id="calorie-height" placeholder="Centimeters" /><br />
+          <label for="calorie-weight">Weight:</label><br />
+          <input type="text" id="calorie-weight" placeholder="Kilograms" /><br />
+          <label for="activity">Activity:</label><br />
+          <select name="activity" id="activity">
+            <option value="basal">Basal Metabolic Rate (BMR)</option>
+            <option value="sedentary">Sedentary: little or no exercise</option>
+            <option value="light">Light: exercise 1-3 times/week</option>
+            <option value="moderate">Moderate: exercise 4-5 times/week</option>
+            <option value="active">Active: daily exercise or intense exercise 3-4 times/week</option>
+            <option value="very-active">Very Active: intense exercise 6-7 times/week</option>
+            <option value="extra-active">Extra Active: very intense exercise daily or physical job</option> </select
+          ><br /><br />
+          <span id="calorie-submit" class="btn btn-blue">Submit</span>
+        </form>
+        <div class="list-box">
+          <br /><h4 id="calorie-result">YOUR CALORIE NEEDING = [Not Entered]</h4><br />
+          <h3>Guideline:</h3>
+          <ul>
+            <li>To Lose Weight: Take 250-500 minus your calorie needing.</li>
+            <li>To Maintain: Take 0-200 minus or 0-200 plus your calorie needing.</li>
+            <li>To Gain Weight: Take 250-500 plus your calorie needing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--Workout Planning-->
+    <section id="workout-planning" class="page page-light">
+      <h1>WORKOUT PLANNING</h1><br />
+      <p
+        >Select a workout program based on your goal and your schedule. Firstly, select your goal. Then, determine how
+        many days you could allow time to workout in a week.</p
+      ><br /><br />
+      <div class="v-container">
+        <div class="slide" id="gaining-muscle">
+          <br /><h2>Gaining Muscle (Bodybuilding):</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Days/Week</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <td>Wednesday</td>
+                <td>Thursday</td>
+                <td>Friday</td>
+                <td>Saturday</td>
+              </tr>
+            </thead>
+            <tr>
+              <td>Fullbody</td>
+              <td>3</td>
+              <td
+                >Squat (4x10)<br />
+                Bench Press (4x10)<br />
+                Lat Pulldown (4x10)<br />
+                Overhead Press (4x10)<br />
+                Z-Bar Curl (4x10)<br />
+                Skull Crusher (4x10)</td
+              >
+              <td>OFF</td>
+              <td
+                >Lunge (4x10)<br />
+                Incline Bench Press (4x10)<br />
+                Barbell Row(4x10)<br />
+                Lateral Raises (4x10)<br />
+                Dumbbell Curl (4x10)<br />
+                Overhead Tricep Extension (4x10)</td
+              >
+              <td>OFF</td>
+              <td
+                >Squat (4x10)<br />
+                Bench Press (4x10)<br />
+                Lat Pulldown (4x10)<br />
+                Overhead Press (4x10)<br />
+                Z-Bar Curl (4x10)<br />
+                Skull Crusher (4x10)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>Upper-Lower</td>
+              <td>4</td>
+              <td
+                >Bench Press (4x10)<br />
+                Lat Pulldown (4x10)<br />
+                Overhead Press (4x10)<br />
+                Barbell Row<br />
+                Z-Bar Curl (4x10)<br />
+                Skull Crusher (4x10)</td
+              >
+              <td
+                >Squat (4x8)<br />
+                Deadlift (4x5)<br />
+                Lunge (4x10)<br />
+                Leg Extension (4x10)<br />
+                Leg Curl (4x10)<br />
+                Calf Raises (4x12)</td
+              >
+              <td>OFF</td>
+              <td
+                >Bench Press (4x10)<br />
+                Lat Pulldown (4x10)<br />
+                Overhead Press (4x10)<br />
+                Barbell Row (4x10)<br />
+                Z-Bar Curl (4x10)<br />
+                Skull Crusher (4x10)</td
+              >
+              <td
+                >Squat (4x8)<br />
+                Deadlift (4x5)<br />
+                Lunge (4x10)<br />
+                Leg Extension (4x10)<br />
+                Leg Curl (4x10)<br />
+                Calf Raises (4x12)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>Push-Pull-Legs</td>
+              <td>5</td>
+              <td
+                >Bench Press (4x10)<br />
+                Incline Dumbbell Bench Press (4x10)<br />
+                Cable Crossover (4x12)<br />
+                Overhead Press (4x10)<br />
+                Lateral Raises (4x10)<br />
+                Skull Crusher (4x10)<br />
+                Overhead Tricep Extension (3x10)</td
+              >
+              <td
+                >Lat Pulldown (4x10)<br />
+                Barbell Row (4x10)<br />
+                Shrugs (4x10)<br />
+                Cable Pullovers (4x10)<br />
+                Z-Bar Curl (4x10)<br />
+                Hammer Curl (3x10)</td
+              >
+              <td
+                >Squat (4x8)<br />
+                Deadlift (4x5)<br />
+                Lunge (4x10)<br />
+                Leg Extension (4x10)<br />
+                Leg Curl (4x10)<br />
+                Calf Raises (4x12)</td
+              >
+              <td
+                >Bench Press (4x10)<br />
+                Incline Dumbbell Bench Press (4x10)<br />
+                Cable Crossover (4x12)<br />
+                Overhead Press (4x10)<br />
+                Lateral Raises (4x10)<br />
+                Skull Crusher (4x10)<br />
+                Overhead Tricep Extension (3x10)</td
+              >
+              <td
+                >Lat Pulldown (4x10)<br />
+                Deadlift (4x5)<br />
+                Barbell Row (4x10)<br />
+                Cable Pullovers (4x10)<br />
+                Z-Bar Curl (4x10)<br />
+                Hammer Curl (3x10)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>6-Days Split</td>
+              <td>6</td>
+              <td
+                >Bench Press (4x10)<br />
+                Incline Dumbbell Bench Press (4x10)<br />
+                Cable Crossover (4x12)<br />
+                Skull Crusher (4x10)<br />
+                Overhead Tricep Extension (3x10)</td
+              >
+              <td
+                >Lat Pulldown (4x10)<br />
+                Barbell Row (4x10)<br />
+                Shrugs (4x10)<br />
+                Cable Pullovers (4x10)<br />
+                Z-Bar Curl (4x10)<br />
+                Hammer Curl (3x10)</td
+              >
+              <td
+                >Squat (4x8)<br />
+                Lunge (4x10)<br />
+                Leg Curl (4x10)<br />
+                Calf Raises (4x12)<br />
+                Overhead Press (4x10)<br />
+                Lateral Raises (4x10)<br />
+                Front Raises (4x10)</td
+              >
+              <td
+                >Bench Press (4x10)<br />
+                Incline Dumbbell Bench Press (4x10)<br />
+                Cable Crossover (4x12)<br />
+                Skull Crusher (4x10)<br />
+                Overhead Tricep Extension (3x10)</td
+              >
+              <td
+                >Lat Pulldown (4x10)<br />
+                Deadlift (4x5)<br />
+                Barbell Row (4x10)<br />
+                Cable Pullovers (4x10)<br />
+                Z-Bar Curl (4x10)<br />
+                Hammer Curl (3x10)</td
+              >
+              <td
+                >Squat (4x8)<br />
+                Lunge (4x10)<br />
+                Leg Curl (4x10)<br />
+                Calf Raises (4x12)<br />
+                Overhead Press (4x10)<br />
+                Lateral Raises (4x10)<br />
+                Front Raises (4x10)</td
+              >
+            </tr>
+          </table>
+        </div>
+
+        <div class="slide" id="losing-weight">
+          <br /><h2>Losing Weight (Cardio):</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Days/Week</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <td>Wednesday</td>
+                <td>Thursday</td>
+                <td>Friday</td>
+                <td>Saturday</td>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>3-Days Cardio</td>
+              <td>3</td>
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td>OFF</td>
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td>OFF</td>
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>4-Days Cardio</td>
+              <td>4</td>
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td>OFF</td>
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>5-Days Cardio</td>
+              <td>5</td>
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>6-Days Cardio</td>
+              <td>6</td>
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+              <td
+                >High Knees x30<br />
+                Pushup x10<br />
+                1 Minute Sit On Wall<br />
+                Air Squat x15<br />
+                Pushup x20<br />
+                Crunch x15<br />
+                Pushup x30<br />
+                High Knees x20<br />
+                Jumping Jacks x50<br />
+                (Repeat 2/3 times)</td
+              >
+            </tr>
+          </table>
+        </div>
+
+        <div class="slide" id="building-strength">
+          <br /><h2>Building Strength (Powerlifting):</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Days/Week</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <td>Wednesday</td>
+                <td>Thursday</td>
+                <td>Friday</td>
+                <td>Saturday</td>
+              </tr>
+            </thead>
+            <tr>
+              <td>3-Days Powerlifting</td>
+              <td>3</td>
+              <td
+                >Squat (2x8)<br />
+                Bench Press (4x8)<br />
+                Front Squat (2x5)<br />
+                Vertical Pull (2x8)</td
+              >
+              <td>OFF</td>
+              <td
+                >Squat (3x3)<br />
+                Bench Press (4x3)<br />
+                Deadlift (2x5)<br />
+                Horizontal Pull (3x5)</td
+              >
+              <td>OFF</td>
+              <td
+                >Squat (3x4)<br />
+                Bench Press (4x4)<br />
+                Deadlift (3x4)<br />
+                Overhead Press (3x5)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>4-Days Powerlifting</td>
+              <td>4</td>
+              <td
+                >Squat (3x8)<br />
+                Bench Press (3x8)</td
+              >
+              <td
+                >Bench Press (3x3)<br />
+                Deadlift (3x3)
+              </td>
+              <td>OFF</td>
+              <td
+                >Squat (3x4)<br />
+                Bench Press (3x4)</td
+              >
+              <td
+                >SL Variant (3x8)<br />
+                Horizontal Pull (4x10)<br />
+                Vertical Push (4x10)<br />
+                Vertical Pull (4x10)</td
+              >
+              <td>OFF</td>
+            </tr>
+          </table>
+        </div>
+        <div class="slide" id="building-stamina">
+          <br /><h2>Building Stamina (Crossfit):</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Days/Week</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <td>Wednesday</td>
+                <td>Thursday</td>
+                <td>Friday</td>
+                <td>Saturday</td>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>3-Days Crossfit</td>
+              <td>3</td>
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td>OFF</td>
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td>OFF</td>
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>4-Days Crossfit</td>
+              <td>4</td>
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td>OFF</td>
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>5-Days Crossfit</td>
+              <td>5</td>
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>6-Days Crossfit</td>
+              <td>6</td>
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+              <td
+                >Burpee Warmup x10<br />
+                Deadlifts x5<br />
+                Squat Cleans x5<br />
+                Push Jerks x5<br />
+                Pullups x5<br />
+                (5 Rounds)<br />
+                (Every round decrease reps: 5=>4=>3=>2=>1)<br />
+                (No rest between sets)</td
+              >
+            </tr>
+          </table>
+        </div>
+        <div class="slide" id="street-workout">
+          <br /><h2>Street Workout (Calisthenics):</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Days/Week</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <td>Wednesday</td>
+                <td>Thursday</td>
+                <td>Friday</td>
+                <td>Saturday</td>
+              </tr>
+            </thead>
+            <tr>
+              <td>3-Days Calisthenics</td>
+              <td>3</td>
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td>OFF</td>
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td>OFF</td>
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>4-Days Calisthenics</td>
+              <td>4</td>
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td>OFF</td>
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>5-Days Calisthenics</td>
+              <td>5</td>
+              <td
+                >Pullups x5 Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td>OFF</td>
+            </tr>
+
+            <tr>
+              <td>6-Days Calisthenics</td>
+              <td>6</td>
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+              <td
+                >Pullups x5<br />
+                Toes to Bar x5<br />
+                Jump Squats x8<br />
+                Pushups x10<br />
+                Chair Dips x12<br />
+                Jump Muscleups x3<br />
+                Decline Pushups x8<br />
+                60 Seconds Wall Sit<br />
+                (Do 3 cycles)<br />
+                (2 min rest between cycles, no rest between exercises)</td
+              >
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!--Exercise Guide-->
+    <section id="exercise-guide" class="page page-dark">
+      <h1>EXERCISE GUIDE</h1><br />
+      <p>Select an exercise to learn how to do it.</p><br /><hr /><br />
+      <select id="exercise-select" aria-placeholder="Select an exercise">
+        <option value="none" selected disabled hidden>Select an exercise</option>
+        <option value="air-squat">Air Squat</option>
+        <option value="barbell-row">Barbell Row</option>
+        <option value="bench-press">Bench Press</option>
+        <option value="burpee">Burpees</option>
+        <option value="cable-cross">Cable Crossover</option>
+        <option value="cable-pullover">Cable Pullover</option>
+        <option value="calf-raise">Calf Raise</option>
+        <option value="chair-dips">Chair Dips</option>
+        <option value="clean-and-press">Clean and Press</option>
+        <option value="crunch">Crunches</option>
+        <option value="deadlift">Deadlift</option>
+        <option value="decline-pushup">Decline Pushups</option>
+        <option value="dumbbel-curl">Dumbbel Curl</option>
+        <option value="front-raise">Front Raises</option>
+        <option value="front-squat">Front Squat</option>
+        <option value="hammer-curl">Hammer Curl</option>
+        <option value="high-knee">High Knees</option>
+        <option value="incline-bench-press">Incline Bench Press</option>
+        <option value="incline-dumbbell-press">Incline Dumbbell Bench Press</option>
+        <option value="jumping-jack">Jumping Jacks</option>
+        <option value="jump-squat">Jump Squat</option>
+        <option value="lateral-raise">Lateral Raises</option>
+        <option value="lat-pulldown">Lat Pulldown</option>
+        <option value="leg-curl">Leg Curl</option>
+        <option value="leg-extension">Leg Extension</option>
+        <option value="lunge">Lunge</option>
+        <option value="muscle-up">Muscle Up</option>
+        <option value="overhead-press">Overhead Press</option>
+        <option value="overhead-tricep">Overhead Tricep Extension</option>
+        <option value="pullup">Pullup</option>
+        <option value="pushup">Pushups</option>
+        <option value="shrug">Shrugs</option>
+        <option value="skull-crusher">Skull Crusher</option>
+        <option value="sl-deadlift">SL Deadlift</option>
+        <option value="squat">Squat</option>
+        <option value="squat-clean-and-press">Squat Clean and Press</option>
+        <option value="wall-sit">Wall Sit</option>
+        <option value="z-bar-curl">Z-Bar Curl</option> </select
+      ><br /><br />
+      <span class="btn btn-blue" id="show-exercise">Show</span><br /><br /><br />
+      <img id="exercise-pic" src="img/exercise.png" alt="exercise" height="360px" />
+    </section>
+
+    <!--FAQ-->
+    <section id="faq" class="page page-light">
+      <h1>FREQUENTLY ASKED QUESTIONS</h1><br />
+      <p
+        >If you have a question mark in your head you can contact us but firstly you should browse our FAQ section.
+        Maybe you can find the answer there. Don't worry if you could not:</p
+      ><br />
+      <span id="contact-us" class="btn btn-dark"><a href="#contact">Contact Us</a></span>
+      <br /><br /><br />
+      <div class="list-box">
+        <ul>
+          <li>
+            <h3>Question1:</h3>
+            <p>Answer1</p>
+          </li>
+          <li>
+            <h3>Question2:</h3>
+            <p>Answer2</p>
+          </li>
+          <li>
+            <h3>Question3:</h3>
+            <p>Answer3</p>
+          </li>
+          <li>
+            <h3>Question4:</h3>
+            <p>Answer4</p>
+          </li>
+          <li>
+            <h3>Question5:</h3>
+            <p>Answer5</p>
+          </li>
+          <li>
+            <h3>Question6:</h3>
+            <p>Answer6</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Contact-->
+    <footer id="contact" class="page page-dark">
+      <h2>CONTACT</h2><br />
+      <h3>GSM:</h3><a href="tel:000-000-0000"><i class="fa fa-phone" aria-hidden="true"></i> 000-000-0000 </a>
+      <br /><br />
+      <h3>E-Mail:</h3
+      ><a href="mailto:abarisyerlikaya@gmail.com"
+        ><i class="fa fa-envelope" aria-hidden="true"></i> abarisyerlikaya@gmail.com</a
+      ><br /><br />
+      <h3>GitHub:</h3
+      ><a href="github.com/abarisyerlikaya"
+        ><i class="fab fa-github" aria-hidden="true"></i> github.com/abarisyerlikaya
+      </a>
+      <br /><br /><hr /><br />
+      2020 | Designed and developed by Barış YERLİKAYA.
+    </footer>
+
+    <!--Script-->
+    <script src="app.js"></script>
+  </body>
+</html>
